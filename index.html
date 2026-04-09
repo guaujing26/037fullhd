@@ -1129,6 +1129,7 @@
                         <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
                         <li><a href="#">เงื่อนไขการใช้งาน</a></li>
                         <li><a href="#">แจ้งลิงก์เสีย</a></li>
+                        <li><a href="admin.html"><i class="fas fa-lock" style="margin-right:4px;"></i> แอดมิน</a></li>
                     </ul>
                 </div>
             </div>
@@ -1160,7 +1161,9 @@
     <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
 
     <script>
-        const movieData = {
+        const STORAGE_KEYS = { movies: '037_movies', series: '037_series', anime: '037_anime' };
+
+        const defaultMovieData = {
             newMovies: [
                 { title: "มิชชั่น อิมพอสซิเบิ้ล 8", year: "2026", rating: "8.9", quality: "4K", type: "ซับไทย", genre: "action", img: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=400&q=80", desc: "ภารกิจสุดท้ายของอีธาน ฮันท์ กับเดิมพันสูงที่สุดในชีวิต เมื่อเทคโนโลยี AI คุกคามมนุษยชาติ" },
                 { title: "อเวนเจอร์ส: ซีเคร็ต วอร์ส", year: "2026", rating: "9.2", quality: "4K", type: "พากย์ไทย", genre: "action", isNew: true, img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&q=80", desc: "การรวมตัวครั้งยิ่งใหญ่ที่สุดของเหล่าฮีโร่ เพื่อปกป้องจักรวาลจากภัยคุกคามระดับมัลติเวิร์ส" },
@@ -1207,6 +1210,22 @@
                 { title: "สปาย x แฟมิลี่ ซีซั่น 3", year: "2026", rating: "8.9", quality: "4K", type: "พากย์ไทย", genre: "anime", img: "https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=400&q=80", desc: "ครอบครัวฟอร์เจอร์กลับมากับภารกิจลับสุดฮา" },
                 { title: "โซโล เลเวลลิ่ง ซีซั่น 2", year: "2026", rating: "9.1", quality: "4K", type: "ซับไทย", genre: "anime", img: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=400&q=80", desc: "ซึงจินอู ผู้ล่าที่อ่อนแอที่สุดกลายเป็นผู้ที่แข็งแกร่งที่สุด" },
             ]
+        };
+
+        function loadFromStorage(key, fallback) {
+            try {
+                const data = localStorage.getItem(STORAGE_KEYS[key]);
+                if (data) return JSON.parse(data);
+            } catch(e) {}
+            return fallback;
+        }
+
+        const movieData = {
+            newMovies: loadFromStorage('movies', defaultMovieData.newMovies),
+            recommended: loadFromStorage('movies', defaultMovieData.recommended).slice().reverse(),
+            trending: defaultMovieData.trending,
+            series: loadFromStorage('series', defaultMovieData.series),
+            anime: loadFromStorage('anime', defaultMovieData.anime),
         };
 
         function createMovieCard(movie) {
