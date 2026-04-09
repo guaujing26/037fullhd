@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>037FULLHD - ดูหนังออนไลน์ฟรี HD 4K คมชัด</title>
+    <meta name="description" content="037fullhd.com ดูหนังออนไลน์ฟรี คมชัดระดับ HD 4K ซับไทย พากย์ไทย อัปเดตหนังใหม่ทุกวัน">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a2e;
+            --bg-hover: #222240;
+            --accent: #e50914;
+            --accent-hover: #ff1a25;
+            --gold: #f5c518;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6a6a7a;
+            --border: #2a2a3e;
+            --gradient-primary: linear-gradient(135deg, #e50914, #b20710);
+            --gradient-gold: linear-gradient(135deg, #f5c518, #d4a80f);
+            --shadow-glow: 0 0 30px rgba(229, 9, 20, 0.3);
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 4px; }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled { background: rgba(10, 10, 15, 0.98); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); }
+
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            flex-shrink: 0;
+        }
+
+        .logo span:first-child { color: var(--accent); }
+        .logo span:last-child { color: var(--text-primary); }
+        .logo .dot { color: var(--gold); }
+
+        .logo-badge {
+            background: var(--gradient-gold);
+            color: #000;
+            font-size: 0.55rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            align-self: flex-start;
+            margin-top: 4px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .nav a {
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .nav a:hover, .nav a.active { color: var(--text-primary); background: rgba(255, 255, 255, 0.06); }
+        .nav a.active { color: var(--accent); font-weight: 500; }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box input {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid transparent;
+            border-radius: 50px;
+            padding: 10px 20px 10px 44px;
+            color: var(--text-primary);
+            font-family: 'Kanit', sans-serif;
+            font-size: 0.9rem;
+            width: 260px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .search-box input:focus { border-color: var(--accent); background: rgba(255, 255, 255, 0.1); width: 320px; }
+        .search-box input::placeholder { color: var(--text-muted); }
+        .search-box i { position: absolute; left: 16px; color: var(--text-muted); font-size: 0.9rem; pointer-events: none; }
+
+        .btn-member {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .btn-member:hover { transform: translateY(-1px); box-shadow: var(--shadow-glow); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.4rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* Hero */
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding-top: 70px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=1920&q=80') center/cover no-repeat;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10,10,15,0.95) 0%, rgba(10,10,15,0.7) 50%, rgba(10,10,15,0.3) 100%),
+                        linear-gradient(0deg, var(--bg-primary) 0%, transparent 30%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 24px;
+            width: 100%;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(229, 9, 20, 0.15);
+            border: 1px solid rgba(229, 9, 20, 0.3);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .hero-tag i { font-size: 0.75rem; }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            max-width: 650px;
+        }
+
+        .hero h1 .highlight { color: var(--accent); }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-meta-item i { color: var(--gold); }
+        .hero-meta-item .badge-4k {
+            background: var(--gradient-gold);
+            color: #000;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn-play {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--gradient-primary);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 50px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-play:hover { transform: translateY(-2px); box-shadow: var(--shadow-glow); }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text-primary);
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover { background: rgba(255, 255, 255, 0.14); }
+
+        /* Sections */
+        .section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 50px 24px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 28px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .see-all {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: gap 0.2s ease;
+        }
+
+        .see-all:hover { gap: 10px; }
+
+        /* Category Pills */
+        .categories {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 36px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: none;
+        }
+
+        .categories::-webkit-scrollbar { display: none; }
+
+        .cat-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .cat-pill:hover { border-color: var(--accent); color: var(--accent); }
+        .cat-pill.active { background: var(--gradient-primary); border-color: transparent; color: white; font-weight: 500; }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
+            gap: 24px;
+        }
+
+        .movie-card {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: var(--bg-card);
+        }
+
+        .movie-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); }
+
+        .movie-poster {
+            position: relative;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+        }
+
+        .movie-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-card:hover .movie-poster img { transform: scale(1.08); }
+
+        .movie-poster .overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .movie-card:hover .overlay { opacity: 1; }
+
+        .play-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transform: scale(0);
+            transition: transform 0.3s ease 0.1s;
+        }
+
+        .movie-card:hover .play-icon { transform: scale(1); }
+
+        .movie-badges {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            font-size: 0.65rem;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-hd { background: var(--gradient-gold); color: #000; }
+        .badge-new { background: var(--gradient-primary); color: white; }
+        .badge-sub { background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); color: white; }
+        .badge-ep { background: rgba(80, 200, 120, 0.9); color: white; }
+
+        .movie-rating {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .movie-rating i { color: var(--gold); font-size: 0.65rem; }
+
+        .movie-info { padding: 14px; }
+
+        .movie-title {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+
+        .movie-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .movie-meta span { display: flex; align-items: center; gap: 4px; }
+
+        /* Trending Row */
+        .trending-row {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 16px;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .trending-row::-webkit-scrollbar { display: none; }
+
+        .trending-card {
+            flex: 0 0 320px;
+            scroll-snap-align: start;
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .trending-card:hover { transform: scale(1.03); }
+
+        .trending-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .trending-card .trending-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 16px;
+        }
+
+        .trending-rank {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 2rem;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent);
+            line-height: 1;
+        }
+
+        .trending-card .movie-title { font-size: 0.95rem; margin-bottom: 4px; }
+        .trending-card .movie-meta { font-size: 0.8rem; }
+
+        /* Series Section */
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .series-card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            border: 1px solid transparent;
+        }
+
+        .series-card:hover { border-color: var(--border); transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); }
+
+        .series-poster {
+            width: 120px;
+            flex-shrink: 0;
+        }
+
+        .series-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            min-height: 170px;
+        }
+
+        .series-info {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .series-info .movie-title { font-size: 1rem; -webkit-line-clamp: 1; }
+
+        .series-ep {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(80, 200, 120, 0.15);
+            color: #50c878;
+            font-size: 0.78rem;
+            padding: 4px 10px;
+            border-radius: 50px;
+            width: fit-content;
+        }
+
+        .series-desc {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 0;
+            margin: 20px 0;
+        }
+
+        .stats-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label { color: var(--text-muted); font-size: 0.9rem; margin-top: 4px; }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .modal-overlay.active { display: flex; }
+
+        .modal {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.6);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .modal-close:hover { background: var(--accent); }
+
+        .modal-player {
+            aspect-ratio: 16/9;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-player img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .big-play {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            color: white;
+        }
+
+        .big-play:hover { transform: scale(1.1); box-shadow: var(--shadow-glow); }
+
+        .modal-body { padding: 28px; }
+        .modal-body h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 12px; }
+
+        .modal-tags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .modal-tags span {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .modal-desc { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.8; }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 50px 0 30px;
+            margin-top: 40px;
+        }
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo { margin-bottom: 14px; }
+        .footer-brand p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.7; max-width: 320px; }
+
+        .footer h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 16px; color: var(--text-primary); }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-links a { color: var(--text-muted); font-size: 0.85rem; transition: color 0.2s; }
+        .footer-links a:hover { color: var(--accent); }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .footer-bottom p { color: var(--text-muted); font-size: 0.82rem; }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            transition: all 0.2s;
+        }
+
+        .social-links a:hover { background: var(--accent); color: white; }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 46px;
+            height: 46px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            z-index: 900;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        .back-to-top:hover { transform: translateY(-3px); }
+
+        /* Loading Skeleton */
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, var(--bg-card) 25%, var(--bg-hover) 50%, var(--bg-card) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+            border-radius: var(--radius);
+        }
+
+        /* Mobile Nav */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(18, 18, 26, 0.98);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border);
+            z-index: 999;
+            padding: 8px 0;
+        }
+
+        .mobile-nav-inner {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .mobile-nav a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            color: var(--text-muted);
+            font-size: 0.7rem;
+            padding: 6px 12px;
+            transition: color 0.2s;
+        }
+
+        .mobile-nav a i { font-size: 1.2rem; }
+        .mobile-nav a.active, .mobile-nav a:hover { color: var(--accent); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero h1 { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner { height: 60px; }
+            .search-box input { width: 180px; }
+            .search-box input:focus { width: 200px; }
+            .btn-member { display: none; }
+            .hero { min-height: 70vh; }
+            .hero h1 { font-size: 2rem; }
+            .hero-desc { font-size: 0.95rem; }
+            .movie-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+            .movie-info { padding: 10px; }
+            .movie-title { font-size: 0.82rem; }
+            .section { padding: 30px 16px; }
+            .section-title { font-size: 1.2rem; }
+            .mobile-nav { display: block; }
+            body { padding-bottom: 65px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .trending-card { flex: 0 0 260px; }
+            .series-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 480px) {
+            .movie-grid { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+            .hero h1 { font-size: 1.6rem; }
+            .stats-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .animate-in:nth-child(1) { animation-delay: 0.05s; }
+        .animate-in:nth-child(2) { animation-delay: 0.1s; }
+        .animate-in:nth-child(3) { animation-delay: 0.15s; }
+        .animate-in:nth-child(4) { animation-delay: 0.2s; }
+        .animate-in:nth-child(5) { animation-delay: 0.25s; }
+        .animate-in:nth-child(6) { animation-delay: 0.3s; }
+        .animate-in:nth-child(7) { animation-delay: 0.35s; }
+        .animate-in:nth-child(8) { animation-delay: 0.4s; }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <span>037</span><span>FULLHD</span><span class="dot">.</span><span>com</span>
+                <span class="logo-badge">4K</span>
+            </a>
+
+            <nav class="nav" id="mainNav">
+                <a href="#" class="active">หน้าแรก</a>
+                <a href="#movies">หนังใหม่</a>
+                <a href="#series">ซีรีส์</a>
+                <a href="#trending">มาแรง</a>
+                <a href="#anime">อนิเมะ</a>
+                <a href="#netflix">Netflix</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="ค้นหาหนัง ซีรีส์ ..." autocomplete="off">
+                </div>
+                <button class="btn-member"><i class="fas fa-crown"></i>&nbsp; สมาชิก VIP</button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-tag"><i class="fas fa-fire"></i> แนะนำวันนี้</div>
+            <h1>ดูหนังออนไลน์<br><span class="highlight">คมชัดระดับ 4K</span><br>ฟรี ไม่มีค่าใช้จ่าย</h1>
+            <p class="hero-desc">เพลิดเพลินกับหนังดังทั่วโลก ซีรีส์สุดฮิต อัปเดตใหม่ทุกวัน พากย์ไทย ซับไทย ครบทุกเรื่อง</p>
+            <div class="hero-meta">
+                <div class="hero-meta-item"><span class="badge-4k">4K</span> Ultra HD</div>
+                <div class="hero-meta-item"><i class="fas fa-star"></i> 8.7 คะแนน</div>
+                <div class="hero-meta-item"><i class="fas fa-clock"></i> 2 ชม. 28 นาที</div>
+                <div class="hero-meta-item"><i class="fas fa-closed-captioning"></i> ซับไทย / พากย์ไทย</div>
+            </div>
+            <div class="hero-btns">
+                <button class="btn-play" onclick="openModal()"><i class="fas fa-play"></i> ดูเลย</button>
+                <button class="btn-secondary"><i class="fas fa-plus"></i> เพิ่มรายการ</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <div class="section" style="padding-bottom: 0;">
+        <div class="categories" id="categories">
+            <button class="cat-pill active" data-cat="all">ทั้งหมด</button>
+            <button class="cat-pill" data-cat="action">แอ็คชั่น</button>
+            <button class="cat-pill" data-cat="comedy">ตลก</button>
+            <button class="cat-pill" data-cat="horror">สยองขวัญ</button>
+            <button class="cat-pill" data-cat="romance">โรแมนติก</button>
+            <button class="cat-pill" data-cat="scifi">ไซไฟ</button>
+            <button class="cat-pill" data-cat="drama">ดราม่า</button>
+            <button class="cat-pill" data-cat="anime">อนิเมะ</button>
+            <button class="cat-pill" data-cat="thai">หนังไทย</button>
+            <button class="cat-pill" data-cat="marvel">มาร์เวล</button>
+            <button class="cat-pill" data-cat="dc">DC</button>
+            <button class="cat-pill" data-cat="war">สงคราม</button>
+            <button class="cat-pill" data-cat="documentary">สารคดี</button>
+        </div>
+    </div>
+
+    <!-- New Movies -->
+    <section class="section" id="movies">
+        <div class="section-header">
+            <h2 class="section-title">หนังใหม่ล่าสุด</h2>
+            <a href="#" class="see-all">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="movie-grid" id="newMovies"></div>
+    </section>
+
+    <!-- Trending -->
+    <section class="section" id="trending">
+        <div class="section-header">
+            <h2 class="section-title">กำลังมาแรง 🔥</h2>
+            <a href="#" class="see-all">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="trending-row" id="trendingRow"></div>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-banner">
+        <div class="stats-inner">
+            <div class="stat-item">
+                <div class="stat-number" data-target="25847">0</div>
+                <div class="stat-label">เรื่องทั้งหมด</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="4320">0</div>
+                <div class="stat-label">คุณภาพ 4K</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1850">0</div>
+                <div class="stat-label">ซีรีส์ออนไลน์</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="582410">0</div>
+                <div class="stat-label">สมาชิกออนไลน์</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recommended -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">แนะนำสำหรับคุณ</h2>
+            <a href="#" class="see-all">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="movie-grid" id="recommendedMovies"></div>
+    </section>
+
+    <!-- Series -->
+    <section class="section" id="series">
+        <div class="section-header">
+            <h2 class="section-title">ซีรีส์ยอดนิยม</h2>
+            <a href="#" class="see-all">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="series-grid" id="seriesGrid"></div>
+    </section>
+
+    <!-- Anime -->
+    <section class="section" id="anime">
+        <div class="section-header">
+            <h2 class="section-title">อนิเมะอัปเดตล่าสุด</h2>
+            <a href="#" class="see-all">ดูทั้งหมด <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="movie-grid" id="animeGrid"></div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-player">
+                <img id="modalImage" src="" alt="">
+                <button class="big-play"><i class="fas fa-play" style="margin-left: 4px;"></i></button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-tags" id="modalTags"></div>
+                <p class="modal-desc" id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span>037</span><span>FULLHD</span><span class="dot">.</span><span>com</span>
+                    </div>
+                    <p>เว็บไซต์ดูหนังออนไลน์ฟรี คมชัดระดับ HD 4K อัปเดตหนังใหม่ ซีรีส์ดัง อนิเมะสุดฮิต ทุกวัน พากย์ไทย ซับไทย ครบจบในที่เดียว</p>
+                </div>
+                <div>
+                    <h4>หมวดหมู่</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">หนังใหม่ 2026</a></li>
+                        <li><a href="#">หนังแอ็คชั่น</a></li>
+                        <li><a href="#">หนังตลก</a></li>
+                        <li><a href="#">หนังสยองขวัญ</a></li>
+                        <li><a href="#">หนัง Netflix</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>ซีรีส์</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">ซีรีส์เกาหลี</a></li>
+                        <li><a href="#">ซีรีส์จีน</a></li>
+                        <li><a href="#">ซีรีส์ฝรั่ง</a></li>
+                        <li><a href="#">ซีรีส์ญี่ปุ่น</a></li>
+                        <li><a href="#">ซีรีส์ไทย</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>เกี่ยวกับเรา</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">เกี่ยวกับเว็บ</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">นโยบายความเป็นส่วนตัว</a></li>
+                        <li><a href="#">เงื่อนไขการใช้งาน</a></li>
+                        <li><a href="#">แจ้งลิงก์เสีย</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 037fullhd.com - ดูหนังออนไลน์ฟรี คมชัด HD 4K | สงวนลิขสิทธิ์ทุกประการ</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-line"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Nav -->
+    <div class="mobile-nav">
+        <div class="mobile-nav-inner">
+            <a href="#" class="active"><i class="fas fa-home"></i> หน้าแรก</a>
+            <a href="#movies"><i class="fas fa-film"></i> หนัง</a>
+            <a href="#series"><i class="fas fa-tv"></i> ซีรีส์</a>
+            <a href="#anime"><i class="fas fa-dragon"></i> อนิเมะ</a>
+            <a href="#"><i class="fas fa-user"></i> บัญชี</a>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+
+    <script>
+        const movieData = {
+            newMovies: [
+                { title: "มิชชั่น อิมพอสซิเบิ้ล 8", year: "2026", rating: "8.9", quality: "4K", type: "ซับไทย", genre: "action", img: "https://images.unsplash.com/photo-1535016120720-40c646be5580?w=400&q=80", desc: "ภารกิจสุดท้ายของอีธาน ฮันท์ กับเดิมพันสูงที่สุดในชีวิต เมื่อเทคโนโลยี AI คุกคามมนุษยชาติ" },
+                { title: "อเวนเจอร์ส: ซีเคร็ต วอร์ส", year: "2026", rating: "9.2", quality: "4K", type: "พากย์ไทย", genre: "action", isNew: true, img: "https://images.unsplash.com/photo-1612036782180-6f0b6cd846fe?w=400&q=80", desc: "การรวมตัวครั้งยิ่งใหญ่ที่สุดของเหล่าฮีโร่ เพื่อปกป้องจักรวาลจากภัยคุกคามระดับมัลติเวิร์ส" },
+                { title: "ดิ แบทแมน 2", year: "2026", rating: "8.4", quality: "HD", type: "ซับไทย", genre: "action", img: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&q=80", desc: "อัศวินรัตติกาลกลับมาอีกครั้ง เมื่อก็อตแธมซิตี้เผชิญกับวายร้ายที่น่าสะพรึงกลัวกว่าเดิม" },
+                { title: "ไอแอม เลเจนด์ 2", year: "2026", rating: "8.1", quality: "4K", type: "ซับไทย", genre: "scifi", isNew: true, img: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=400&q=80", desc: "เมื่อโลกหลังหายนะเริ่มฟื้นตัว โรเบิร์ต เนวิลล์ ต้องเผชิญกับภัยคุกคามใหม่ที่ร้ายแรงยิ่งกว่า" },
+                { title: "จอห์น วิค 5", year: "2026", rating: "8.6", quality: "4K", type: "พากย์ไทย", genre: "action", img: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80", desc: "ศึกครั้งสุดท้ายของนักฆ่าในตำนาน จอห์น วิค กลับมาพร้อมการล้างแค้นครั้งใหญ่" },
+                { title: "ผีนางนาก 4K", year: "2026", rating: "7.8", quality: "4K", type: "พากย์ไทย", genre: "thai", img: "https://images.unsplash.com/photo-1594909122845-11baa439b7bf?w=400&q=80", desc: "ตำนานผีไทยสุดคลาสสิกกลับมาในเวอร์ชั่นใหม่ สมจริงกว่าเดิม น่ากลัวกว่าที่เคย" },
+                { title: "อินเตอร์สเตลลาร์ 2", year: "2025", rating: "9.0", quality: "4K", type: "ซับไทย", genre: "scifi", img: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400&q=80", desc: "การเดินทางข้ามกาลเวลาครั้งใหม่ เพื่อค้นหาบ้านใหม่ของมนุษยชาติในจักรวาลที่ไม่มีที่สิ้นสุด" },
+                { title: "เดอะ มาริโอ้ 2", year: "2026", rating: "7.9", quality: "HD", type: "พากย์ไทย", genre: "comedy", img: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80", desc: "การผจญภัยครั้งใหม่ของมาริโอ้กับลุยจี้ ในอาณาจักรเห็ดที่ใหญ่โตกว่าเดิม" },
+            ],
+            recommended: [
+                { title: "ดูน ภาค 3", year: "2026", rating: "9.1", quality: "4K", type: "ซับไทย", genre: "scifi", img: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400&q=80", desc: "มหากาพย์แห่งทะเลทราย พอล อะเทรดีส ขึ้นเป็นจักรพรรดิแห่งจักรวาล" },
+                { title: "ขุนพันธ์ 4", year: "2026", rating: "8.3", quality: "4K", type: "พากย์ไทย", genre: "thai", img: "https://images.unsplash.com/photo-1518676590747-1e3dcf5a4e32?w=400&q=80", desc: "ตำรวจสายพันธุ์ดุ กลับมาปราบอาชญากรรมในตำนานอีกครั้ง" },
+                { title: "เดอะ เฟลช 2", year: "2025", rating: "7.7", quality: "HD", type: "ซับไทย", genre: "action", img: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=400&q=80", desc: "แบร์รี อัลเลน ใช้ความเร็วแสงเดินทางข้ามมัลติเวิร์สอีกครั้ง" },
+                { title: "อวตาร 3", year: "2026", rating: "8.8", quality: "4K", type: "ซับไทย", genre: "scifi", isNew: true, img: "https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?w=400&q=80", desc: "การผจญภัยครั้งใหม่บนดาวแพนดอร่า สำรวจดินแดนที่ยังไม่เคยค้นพบ" },
+                { title: "พี่มาก..พระโขนง 2", year: "2026", rating: "8.0", quality: "4K", type: "พากย์ไทย", genre: "thai", img: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80", desc: "การกลับมาของรักแท้ข้ามภพ พี่มากกับแม่นาคในตำนานที่ทุกคนรอคอย" },
+                { title: "จูราสสิค เวิลด์ 4", year: "2025", rating: "7.5", quality: "HD", type: "ซับไทย", genre: "scifi", img: "https://images.unsplash.com/photo-1559715541-5daf8a0296d0?w=400&q=80", desc: "ไดโนเสาร์ครองโลกอีกครั้ง มนุษย์ต้องเรียนรู้ที่จะอยู่ร่วมกัน" },
+                { title: "วันพีช เดอะมูฟวี่", year: "2026", rating: "8.5", quality: "4K", type: "พากย์ไทย", genre: "anime", img: "https://images.unsplash.com/photo-1578632767115-351597cf2477?w=400&q=80", desc: "ลูฟี่และลูกเรือหมวกฟางออกผจญภัยในเกาะลึกลับ" },
+                { title: "ฟาสต์ 11", year: "2025", rating: "7.2", quality: "HD", type: "พากย์ไทย", genre: "action", img: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&q=80", desc: "ภาคสุดท้ายของครอบครัวความเร็ว ดอม ทอเร็ตโต้ ปิดตำนานสุดมันส์" },
+            ],
+            trending: [
+                { title: "กัปตัน อเมริกา: โลกใหม่", year: "2026", rating: "8.3", quality: "4K", genre: "action", img: "https://images.unsplash.com/photo-1624213111452-35e8d3d5cc18?w=400&q=80" },
+                { title: "ธันเดอร์โบลท์ส", year: "2026", rating: "8.0", quality: "4K", genre: "action", img: "https://images.unsplash.com/photo-1626278664285-f796b9ee7806?w=400&q=80" },
+                { title: "สไปเดอร์แมน 4", year: "2026", rating: "9.0", quality: "4K", genre: "action", img: "https://images.unsplash.com/photo-1635863138275-d9b33299680b?w=400&q=80" },
+                { title: "แฟนตาสติก โฟร์", year: "2026", rating: "8.1", quality: "4K", genre: "action", img: "https://images.unsplash.com/photo-1596727147705-61a532a659bd?w=400&q=80" },
+                { title: "จูราสสิค เวิลด์: รีเบิร์ธ", year: "2025", rating: "7.8", quality: "HD", genre: "scifi", img: "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?w=400&q=80" },
+                { title: "อินไซด์ เอาท์ 3", year: "2026", rating: "8.7", quality: "4K", genre: "comedy", img: "https://images.unsplash.com/photo-1616530940355-351fabd9524b?w=400&q=80" },
+            ],
+            series: [
+                { title: "Squid Game ซีซั่น 3", ep: "อัปเดตตอนที่ 6", year: "2026", rating: "9.3", img: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?w=400&q=80", desc: "เกมเดิมพันชีวิตกลับมาอีกครั้ง ดุเดือดและซับซ้อนกว่าเดิม" },
+                { title: "วันเดอร์แลนด์ เกาหลี", ep: "จบแล้ว 16 ตอน", year: "2026", rating: "8.8", img: "https://images.unsplash.com/photo-1611419010837-0799b72c2e2f?w=400&q=80", desc: "ซีรีส์เกาหลีสุดฮิต แนวโรแมนติก แฟนตาซี สุดซึ้ง" },
+                { title: "เดอะ ลาสต์ ออฟ อัส ซีซั่น 3", ep: "อัปเดตตอนที่ 4", year: "2026", rating: "9.5", img: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80", desc: "การเดินทางของโจเอลและเอลลี่ในโลกหลังวันสิ้นโลก" },
+                { title: "สาธุ ซีซั่น 2", ep: "อัปเดตตอนที่ 8", year: "2026", rating: "8.5", img: "https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=400&q=80", desc: "ซีรีส์ไทยสุดมันส์ เรื่องราวของนักสู้ที่ต้องเอาชีวิตรอด" },
+                { title: "แม่มด ซีซั่น 2", ep: "จบแล้ว 12 ตอน", year: "2025", rating: "8.2", img: "https://images.unsplash.com/photo-1596727362302-b8d891c42ab8?w=400&q=80", desc: "ซีรีส์จีนเรื่องราวแฟนตาซีโลกเวทมนตร์สุดตระการตา" },
+                { title: "โชกุน ซีซั่น 2", ep: "อัปเดตตอนที่ 3", year: "2026", rating: "9.1", img: "https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80", desc: "มหากาพย์ซามูไรญี่ปุ่น ดราม่าทางการเมืองที่ตรึงใจ" },
+            ],
+            anime: [
+                { title: "ดาบพิฆาตอสูร ซีซั่น 5", year: "2026", rating: "9.4", quality: "4K", type: "ซับไทย", genre: "anime", img: "https://images.unsplash.com/photo-1607604276583-c1f32e348e60?w=400&q=80", desc: "ทันจิโร่สู้ศึกสุดท้ายกับราชาอสูร" },
+                { title: "จูจุสึ ไคเซ็น ซีซั่น 3", year: "2026", rating: "9.2", quality: "4K", type: "ซับไทย", genre: "anime", isNew: true, img: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&q=80", desc: "ยูจิ อิทาโดริ เผชิญหน้ากับคำสาปที่แข็งแกร่งที่สุด" },
+                { title: "วันพีช ซีซั่น 3", year: "2026", rating: "9.0", quality: "4K", type: "พากย์ไทย", genre: "anime", img: "https://images.unsplash.com/photo-1560972550-aba3456b5564?w=400&q=80", desc: "ลูฟี่และลูกเรือหมวกฟางเดินทางสู่โลกใหม่" },
+                { title: "ดราก้อนบอล ไดม่า", year: "2025", rating: "8.7", quality: "HD", type: "พากย์ไทย", genre: "anime", img: "https://images.unsplash.com/photo-1601850494422-3cf14624b0b3?w=400&q=80", desc: "โกคูกลับมาในร่างเด็กอีกครั้ง ผจญภัยในจักรวาลใหม่" },
+                { title: "ผ่าพิภพไททัน: จบสมบูรณ์", year: "2025", rating: "9.6", quality: "4K", type: "ซับไทย", genre: "anime", img: "https://images.unsplash.com/photo-1541562232579-512a21360020?w=400&q=80", desc: "บทสรุปของมหากาพย์ไททัน เอเรนกับทางเลือกครั้งสุดท้าย" },
+                { title: "นารูโตะ เจเนอเรชั่นใหม่", year: "2026", rating: "8.4", quality: "HD", type: "ซับไทย", genre: "anime", isNew: true, img: "https://images.unsplash.com/photo-1627281795244-0f18d7601596?w=400&q=80", desc: "เรื่องราวของนินจารุ่นใหม่ในโคโนฮะ" },
+                { title: "สปาย x แฟมิลี่ ซีซั่น 3", year: "2026", rating: "8.9", quality: "4K", type: "พากย์ไทย", genre: "anime", img: "https://images.unsplash.com/photo-1580477667995-2b94f01c9516?w=400&q=80", desc: "ครอบครัวฟอร์เจอร์กลับมากับภารกิจลับสุดฮา" },
+                { title: "โซโล เลเวลลิ่ง ซีซั่น 2", year: "2026", rating: "9.1", quality: "4K", type: "ซับไทย", genre: "anime", img: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?w=400&q=80", desc: "ซึงจินอู ผู้ล่าที่อ่อนแอที่สุดกลายเป็นผู้ที่แข็งแกร่งที่สุด" },
+            ]
+        };
+
+        function createMovieCard(movie) {
+            return `
+                <div class="movie-card animate-in" onclick="openMovieDetail(${JSON.stringify(movie).replace(/"/g, '&quot;')})">
+                    <div class="movie-poster">
+                        <img src="${movie.img}" alt="${movie.title}" loading="lazy">
+                        <div class="overlay">
+                            <div class="play-icon"><i class="fas fa-play" style="margin-left:3px"></i></div>
+                        </div>
+                        <div class="movie-badges">
+                            <span class="badge badge-hd">${movie.quality}</span>
+                            ${movie.isNew ? '<span class="badge badge-new">ใหม่</span>' : ''}
+                            ${movie.type ? `<span class="badge badge-sub">${movie.type}</span>` : ''}
+                        </div>
+                        <div class="movie-rating"><i class="fas fa-star"></i> ${movie.rating}</div>
+                    </div>
+                    <div class="movie-info">
+                        <div class="movie-title">${movie.title}</div>
+                        <div class="movie-meta">
+                            <span><i class="fas fa-calendar-alt"></i> ${movie.year}</span>
+                            <span>${movie.genre === 'thai' ? 'หนังไทย' : movie.genre === 'action' ? 'แอ็คชั่น' : movie.genre === 'scifi' ? 'ไซไฟ' : movie.genre === 'comedy' ? 'ตลก' : movie.genre === 'anime' ? 'อนิเมะ' : movie.genre}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createTrendingCard(movie, index) {
+            return `
+                <div class="trending-card" onclick="openMovieDetail(${JSON.stringify(movie).replace(/"/g, '&quot;')})">
+                    <img src="${movie.img}" alt="${movie.title}" loading="lazy">
+                    <div class="trending-overlay">
+                        <span class="trending-rank">${index + 1}</span>
+                        <div class="movie-badges" style="position:static;margin-bottom:8px">
+                            <span class="badge badge-hd">${movie.quality}</span>
+                        </div>
+                        <div class="movie-title">${movie.title}</div>
+                        <div class="movie-meta">
+                            <span><i class="fas fa-star" style="color:var(--gold)"></i> ${movie.rating}</span>
+                            <span>${movie.year}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function createSeriesCard(series) {
+            return `
+                <div class="series-card" onclick="openMovieDetail(${JSON.stringify(series).replace(/"/g, '&quot;')})">
+                    <div class="series-poster">
+                        <img src="${series.img}" alt="${series.title}" loading="lazy">
+                    </div>
+                    <div class="series-info">
+                        <div class="movie-title">${series.title}</div>
+                        <div class="series-ep"><i class="fas fa-play-circle"></i> ${series.ep}</div>
+                        <div class="movie-meta">
+                            <span><i class="fas fa-star" style="color:var(--gold)"></i> ${series.rating}</span>
+                            <span>${series.year}</span>
+                        </div>
+                        <div class="series-desc">${series.desc}</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderMovies() {
+            document.getElementById('newMovies').innerHTML = movieData.newMovies.map(createMovieCard).join('');
+            document.getElementById('recommendedMovies').innerHTML = movieData.recommended.map(createMovieCard).join('');
+            document.getElementById('trendingRow').innerHTML = movieData.trending.map(createTrendingCard).join('');
+            document.getElementById('seriesGrid').innerHTML = movieData.series.map(createSeriesCard).join('');
+            document.getElementById('animeGrid').innerHTML = movieData.anime.map(createMovieCard).join('');
+        }
+
+        function openMovieDetail(movie) {
+            const modal = document.getElementById('movieModal');
+            document.getElementById('modalImage').src = movie.img;
+            document.getElementById('modalTitle').textContent = movie.title;
+            document.getElementById('modalDesc').textContent = movie.desc || 'รายละเอียดเพิ่มเติมจะอัปเดตเร็วๆ นี้';
+
+            const tags = [];
+            if (movie.year) tags.push(movie.year);
+            if (movie.quality) tags.push(movie.quality);
+            if (movie.type) tags.push(movie.type);
+            if (movie.rating) tags.push(`⭐ ${movie.rating}`);
+            if (movie.ep) tags.push(movie.ep);
+            document.getElementById('modalTags').innerHTML = tags.map(t => `<span>${t}</span>`).join('');
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function openModal() {
+            openMovieDetail(movieData.newMovies[1]);
+        }
+
+        function closeModal() {
+            document.getElementById('movieModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('movieModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // Category filter
+        document.getElementById('categories').addEventListener('click', function(e) {
+            if (!e.target.classList.contains('cat-pill')) return;
+            document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+            e.target.classList.add('active');
+
+            const cat = e.target.dataset.cat;
+            const allMovies = [...movieData.newMovies, ...movieData.recommended, ...movieData.anime];
+
+            if (cat === 'all') {
+                document.getElementById('newMovies').innerHTML = movieData.newMovies.map(createMovieCard).join('');
+                document.getElementById('recommendedMovies').innerHTML = movieData.recommended.map(createMovieCard).join('');
+            } else {
+                const filtered = allMovies.filter(m => m.genre === cat);
+                document.getElementById('newMovies').innerHTML = filtered.length
+                    ? filtered.map(createMovieCard).join('')
+                    : '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:40px;">ไม่พบหนังในหมวดหมู่นี้</p>';
+            }
+        });
+
+        // Search
+        const searchInput = document.getElementById('searchInput');
+        let searchTimeout;
+        searchInput.addEventListener('input', function() {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                const query = this.value.trim().toLowerCase();
+                const allMovies = [...movieData.newMovies, ...movieData.recommended, ...movieData.anime];
+
+                if (!query) {
+                    renderMovies();
+                    return;
+                }
+
+                const results = allMovies.filter(m => m.title.toLowerCase().includes(query));
+                document.getElementById('newMovies').innerHTML = results.length
+                    ? results.map(createMovieCard).join('')
+                    : '<p style="color:var(--text-muted);grid-column:1/-1;text-align:center;padding:40px;">ไม่พบผลลัพธ์สำหรับ "' + query + '"</p>';
+            }, 300);
+        });
+
+        // Header scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            const backBtn = document.getElementById('backToTop');
+
+            header.classList.toggle('scrolled', window.scrollY > 50);
+            backBtn.classList.toggle('visible', window.scrollY > 400);
+        });
+
+        document.getElementById('backToTop').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.dataset.target);
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current).toLocaleString('th-TH');
+                }, 16);
+            });
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Scroll animation
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        // Init
+        renderMovies();
+        const statsBanner = document.querySelector('.stats-banner');
+        if (statsBanner) statsObserver.observe(statsBanner);
+
+        setTimeout(() => {
+            document.querySelectorAll('.movie-card, .trending-card, .series-card').forEach(card => {
+                cardObserver.observe(card);
+            });
+        }, 100);
+    </script>
+</body>
+</html>
